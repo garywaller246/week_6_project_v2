@@ -14,7 +14,9 @@ app.secret_key = b'J.;0ajk>,m8jkLIn89hans*jkj90($'
 def is_logged_in():
     '''If there is a user currently logged in, return True.
     If not, return False.'''
-    pass
+    if 'username' in session:
+        return True
+    return False
 
 def is_valid_customer_id(customer_id):
     '''If the given customer ID matches up to an actual customer record,

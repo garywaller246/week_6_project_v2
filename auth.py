@@ -15,7 +15,15 @@ class Auth:
     def login(self, username, password):
         '''If we have a user with the given user name and password, return True.
         Otherwise, return False.'''
-        pass
+        db = Db()
+        data = (username, password)
+        db.execute("SELECT * FROM user WHERE username = ? AND password = ?", data)
+        row = db.fetchone()
+        if row is not None:
+            session ['username'] = username
+            return True
+        return False
+
 
 
     def logout(self):

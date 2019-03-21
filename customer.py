@@ -43,4 +43,4 @@ class Customer:
     def get_all():
         '''Get a list of Customer objects - one for each row in the 
         relevant table in the database.'''
-        pass
+        
