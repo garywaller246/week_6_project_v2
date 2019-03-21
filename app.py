@@ -62,7 +62,10 @@ def add_customer():
     3. Create a new Customer object with all the above data.
     4. Save it to the database.
     5. Redirect to the /customers/ page.'''
-    pass
+    if request.method == 'GET':
+        return render_template('customer/add.html')
+    
+    title
 
 @app.route("/customers/<int:customer_id>/edit/", methods=['GET', 'POST'])
 def edit_customer(customer_id):
